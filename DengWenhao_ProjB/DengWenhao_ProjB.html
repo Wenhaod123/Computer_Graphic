@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wenhao Deng ProjectB</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL  -->
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width=innerWidth  height="800">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+	<b>User Instruction: </b> <br>
+    	Press <b>IJKL</b> to change the aiming direction of camera  <br>
+		Press <b>AD</b> to move the camera left/right <br>
+		Press <b>WS</b> to move forward/backward in the gaze direction of camera  <br>
+		Press <b>↑↓</b> to change the vertical moving speed of the star pendant  <br>
+		Press <b>←→</b> to move the star pendant left/right on the x-axis  <br>
+		Drag <b>Mouse</b> to rotate the Spaceship  <br>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="DengWenhao_ProjB.js"></script>
+  </body>
+</html>
