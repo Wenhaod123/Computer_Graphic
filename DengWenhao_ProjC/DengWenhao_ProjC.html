@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DengWenhao_ProjC_04</title>
+  </head>
+  <style>
+    body {
+
+  overflow: hidden; 
+    }
+  </style>
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width= "800" height= "800">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <button type="button" onclick="VBO0toggle()">Axis,Grid hide/show</button>
+      <button type="button" onclick="changeshade()">Change ShadeMode Gouraud/Phong</button>
+      <button type="button" onclick="changelight()">Change LightMode Phong/Blinn-Phong</button>
+      <button type="button" onclick="turnlight()">Light on/off</button>
+      
+    </p>
+        <div id="light"> Phong Lighting
+        </div>
+        <div id="shade"> Gouraud Shading
+        </div>
+  <p>Ambient R: <span id="demo"></span>
+  <input type="range" min="-10.0" max="10.0" value="1.0" class="slider" id="myRange">
+  Ambient G: <span id="demo2"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider2" id="myRange2">  Ambient B: <span id="demo3"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider3" id="myRange3">
+  Diffuse R: <span id="demo4"></span>
+  <input type="range" min="-10.0" max="10.0" value="1.0" class="slider4" id="myRange4">
+  Diffuse G: <span id="demo5"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider5" id="myRange5">  Diffuse B: <span id="demo6"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider6" id="myRange6"></p>
+  <p>Specular R: <span id="demo7"></span>
+  <input type="range" min="-10.0" max="10.0" value="1.0" class="slider7" id="myRange7">
+  Specular G: <span id="demo8"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider8" id="myRange8">  Specular B: <span id="demo9"></span><input type="range" min="-10.0" max="10.0" value="1.0" class="slider9" id="myRange9"></p>
+
+      Press <b>IJKL</b> to change the aiming direction of camera  //
+    Press <b>AD</b> to move the camera left/right //
+    Press <b>WS</b> to move forward/backward in the gaze direction of camera //
+    Press <b>↑↓</b> to change the x-position of the light  <br>
+    Press <b>←→</b> to change the y-position of the light  //
+    Press <b>NM</b> to change the z-position of the light
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)
+		<script src="../lib/glmatrix.js"></script>
+--> <script src="materials_Ayerdi04.js"></script>
+		<script src="WD_VBObox-Lib.js"></script>
+    <script src="DengWenhao_ProjC.js"></script>
+    
+  </body>
+</html>
